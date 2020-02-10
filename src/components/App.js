@@ -14,6 +14,8 @@ function App() {
           <Route exact path="/" component={()=> <div>Home</div>}  />
           <Route exact path="/about" component={()=> <div>About</div>}  />
           <Route exact path="/join" component={()=> <div>Join</div>}  />
+          <Route exact path="/dev-signup" component={()=> <div>Developer Sign Up Page</div>}  />
+          <Route exact path="/client-signup" component={()=> <div>Client Sign Up Page</div>}  />
           <Route exact path="/dashboard" component={()=> <div>Dashboard</div>}  />
         </Switch>
       </BrowserRouter>
