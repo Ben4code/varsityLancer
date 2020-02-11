@@ -12,6 +12,9 @@ import { useTheme } from '@material-ui/core/styles'
 import { SwipeableDrawer } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu'
 import IconButton from '@material-ui/core/IconButton'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
 
 
 import { Link } from 'react-router-dom'
@@ -30,16 +33,16 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles(theme => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: '3em',
-    [theme.breakpoints.down("md")]: {
-      marginBottom: '2em',
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: '1em',
-    }
-  },
+  // toolbarMargin: {
+  //   ...theme.mixins.toolbar,
+  //   marginBottom: '3em',
+  //   [theme.breakpoints.down("md")]: {
+  //     marginBottom: '2em',
+  //   },
+  //   [theme.breakpoints.down("xs")]: {
+  //     marginBottom: '1em',
+  //   }
+  // },
   logo: {
     height: "3em",
     [theme.breakpoints.down("md")]: {
@@ -67,13 +70,28 @@ const useStyles = makeStyles(theme => ({
       opacity: 1
     }
   },
+  drawerIcon: {
+    height: "30px",
+    width: "30px"
+  },
   drawerIconContainer: {
     color: "#fff",
     marginLeft: 'auto',
     "&:hover": {
       backgroundColor: "transparent"
-    }     
-
+    }
+  },
+  drawer: {
+    backgroundColor: theme.palette.common.blue
+  },
+  drawerItem: {
+    color: 'white',
+    padding: "1rem 4rem",
+    opacity: 0.7
+  },
+  drawerItemSelected: {
+    opacity: 1,
+    // fontWeight: 600 
   }
 }))
 
@@ -83,7 +101,7 @@ export default function Header(props) {
   const classes = useStyles();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  
+
   const [openDrawer, setOpenDrawer] = useState(false);
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -141,14 +159,30 @@ export default function Header(props) {
 
   const drawer = (
     <React.Fragment>
-      <SwipeableDrawer disableBackdropTransition={!iOS} 
-        disableDiscovery={iOS} open={openDrawer} 
-        onClose={()=> setOpenDrawer(false)} 
-        onOpen={()=> setOpenDrawer(true)}>
-          Exapmle Drawer
+      <SwipeableDrawer disableBackdropTransition={!iOS}
+        disableDiscovery={iOS} open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+        onOpen={() => setOpenDrawer(true)}
+        classes={{paper: classes.drawer}}>
+        <List disablePadding>
+          <ListItem divider button disableRipple 
+            onClick={()=> {setOpenDrawer(false); setValue(0)}} selected={value === 0} component={Link} to="/" >
+            <ListItemText disableTypography className={value === 0 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem } >Home</ListItemText>
+          </ListItem>
+          <ListItem divider button disableRipple onClick={()=> {setOpenDrawer(false); setValue(1)}} selected={value === 1} component={Link} to="/about" >
+            <ListItemText disableTypograph className={value === 1 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem }>About</ListItemText>
+          </ListItem>
+          <ListItem divider button disableRipple onClick={()=> {setOpenDrawer(false); setValue(2)}} selected={value === 2} component={Link} to="/join" >
+            <ListItemText disableTypography className={value === 2 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem }>Join</ListItemText>
+          </ListItem>
+          <ListItem divider button disableRipple onClick={()=> {setOpenDrawer(false); setValue(3)}} selected={value === 3} component={Link} to="/dashboard">
+            <ListItemText disableTypography className={value === 3 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem }>Dashboard</ListItemText>
+          </ListItem>
+
+        </List>
       </SwipeableDrawer>
-      <IconButton right className={classes.drawerIconContainer} onClick={()=> setOpenDrawer(!openDrawer)} disableRipple>
-        <MenuIcon/>
+      <IconButton right className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+        <MenuIcon className={classes.drawerIcon} />
       </IconButton>
     </React.Fragment>
   )
@@ -168,10 +202,10 @@ export default function Header(props) {
       <Menu id="simple-menu" anchorEl={anchorEl} open={openMenu} onClose={handleClose} MenuListProps={{ onMouseLeave: handleClose }}
         classes={{ paper: classes.menu }} elevation={0}>
         {menuOptions.map((option, i) => (
-            <MenuItem key={option.name} component={Link} to={option.link} classes={{ root: classes.menuItem }} onClick={(e) => { handleMenuItemClick(e, i); setValue(2); handleClose() }} selected={i === selectedIndex}>
-              {option.name}
-            </MenuItem>
-          ))}
+          <MenuItem key={option.name} component={Link} to={option.link} classes={{ root: classes.menuItem }} onClick={(e) => { handleMenuItemClick(e, i); setValue(2); handleClose() }} selected={i === selectedIndex}>
+            {option.name}
+          </MenuItem>
+        ))}
       </Menu>
     </React.Fragment>
   )
@@ -184,7 +218,7 @@ export default function Header(props) {
             <Link to="/" onClick={() => setValue(0)}>
               <img className={classes.logo} src={logo} alt="Varsity Lancer Logo" />
             </Link>
-            { matches ? drawer : tabs}
+            {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>

@@ -1,0 +1,23 @@
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+}
+.jumbo{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+}
+.jumbo__content{
+  padding-left: 10rem;
+}
+.jumbo__content--heading{
+  color: #fff;
+  font-family: 'Raleway';
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.jumbo__content button{
+  color: #fff;
+}
