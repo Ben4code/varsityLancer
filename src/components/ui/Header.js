@@ -18,7 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 
 
 import { Link } from 'react-router-dom'
-import logo from '../../assets/vl-logo.png'
+import logo from '../../imgs/vl-logo.png'
 
 function ElevationScroll(props) {
   const { children } = props;
