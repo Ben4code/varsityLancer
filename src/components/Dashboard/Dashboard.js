@@ -1,7 +1,8 @@
 import React from 'react'
 import './dashboard.css'
 import avatar from '../../imgs/avi3.png'
-
+import pie from '../../imgs/pieChart.svg'
+import progress from '../../imgs/progress.svg'
 
 
 
@@ -101,11 +102,21 @@ export default function Index() {
         <div className="dashboard__section--body">
           <div className="dashboard__section--card">
             <h4>Active Projects</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita mollitia provident accusamus obcaecati voluptatibus excepturi vitae tempora voluptate ex quam?</p>
+            <div className="dashboard__section--stats">
+              <img src={pie} alt=""/>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>  
           </div>
           <div className="dashboard__section--card">
             <h4>Jobs Completed</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita mollitia provident accusamus obcaecati voluptatibus excepturi vitae tempora voluptate ex quam?</p>
+            <div className="dashboard__section--stats">
+              <img src={progress} alt=""/>
+              <ul>
+                <li> Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </ul>
+            </div>
           </div>
           <div className="dashboard__section--card">
             <h4>Top Skills</h4>
@@ -116,7 +127,7 @@ export default function Index() {
 
       <div className="dashboard__main">
         <div className="dashboard__content">
-          
+
           <div className="dashboard__content--item">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <div className="dashboard__content--meta">

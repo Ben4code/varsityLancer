@@ -130,6 +130,18 @@
   text-align: center;
   border-radius: 5px;
 }
+.dashboard__section--stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard__section--stats li{
+  list-style: disc;
+  color: #0a4a63;
+}
+.dashboard__section--stats img{
+  width: 30%;
+}
 /* ------------------- Section ----------------- */
 .dashboard__main{
   grid-area: main;

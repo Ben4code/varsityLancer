@@ -193,7 +193,7 @@ export default function Header(props) {
     <React.Fragment>
       <Tabs indicatorColor="primary" value={value} onChange={handleChange} className={classes.tabContainer}>
         <Tab className={classes.tab} component={Link} to="/" label="Home" />
-        <Tab className={classes.tab} component={Link} to="/about" label="About" />
+        {/* <Tab className={classes.tab} component={Link} to="/about" label="About" /> */}
         <Tab aria-owns={anchorEl ? "simple-menu" : undefined}
           aria-haspopup={anchorEl ? "true" : undefined}
           onMouseOver={e => handleClick(e)}
