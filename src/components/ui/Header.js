@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   //   }
   // },
   logo: {
-    height: "3em",
+    width: "20%",
     [theme.breakpoints.down("md")]: {
       height: '3em'
     },
@@ -58,13 +58,15 @@ const useStyles = makeStyles(theme => ({
   tab: {
     ...theme.typography.tab,
     minWidth: 10,
-    marginLeft: '20 px'
+    marginLeft: '20px'
   },
   menu: {
     backgroundColor: theme.palette.common.blue,
-    color: 'white'
+    color: 'white',
+    fontSize: "1.5rem"
   },
   menuItem: {
+    fontSize: '1.5rem',
     opacity: 0.7,
     "&:hover": {
       opacity: 1

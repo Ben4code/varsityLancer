@@ -5,7 +5,7 @@ import HowItWorks from './HowItWorks'
 import Services from './Services'
 import Profiles from './Profiles'
 import USP from './USP'
-import Footer from './Footer'
+// import Footer from './Footer'
 import './home.css'
 
 
@@ -18,7 +18,7 @@ const Home = () => {
       <Profiles/>
       
       <USP/>
-      <Footer/>
+      {/* <Footer/> */}
     </main>
   )
 }
