@@ -18,7 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 
 
 import { Link } from 'react-router-dom'
-import logo from '../../imgs/vl-logo.png'
+import logo from '../../imgs/logo-header.png'
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -33,18 +33,9 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles(theme => ({
-  // toolbarMargin: {
-  //   ...theme.mixins.toolbar,
-  //   marginBottom: '3em',
-  //   [theme.breakpoints.down("md")]: {
-  //     marginBottom: '2em',
-  //   },
-  //   [theme.breakpoints.down("xs")]: {
-  //     marginBottom: '1em',
-  //   }
-  // },
   logo: {
-    width: "20%",
+    width: "15%",
+    marginLeft: "7rem",
     [theme.breakpoints.down("md")]: {
       height: '3em'
     },
@@ -92,8 +83,7 @@ const useStyles = makeStyles(theme => ({
     opacity: 0.7
   },
   drawerItemSelected: {
-    opacity: 1,
-    // fontWeight: 600 
+    opacity: 1
   }
 }))
 
@@ -193,7 +183,7 @@ export default function Header(props) {
     <React.Fragment>
       <Tabs indicatorColor="primary" value={value} onChange={handleChange} className={classes.tabContainer}>
         <Tab className={classes.tab} component={Link} to="/" label="Home" />
-        {/* <Tab className={classes.tab} component={Link} to="/about" label="About" /> */}
+        
         <Tab aria-owns={anchorEl ? "simple-menu" : undefined}
           aria-haspopup={anchorEl ? "true" : undefined}
           onMouseOver={e => handleClick(e)}

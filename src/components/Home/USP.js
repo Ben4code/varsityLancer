@@ -15,8 +15,8 @@ const USP = () => {
 
       <div className="usp__1">
         <div className="usp__1--content">
-          <h2>Getting started is easier than you think.</h2>
-          <p>We have made our onboarding process tailored to suit your needs by ensuring you get your value for time and money.</p>
+          <h2>Enjoy risk free outsourcing</h2>
+          <p>Payments on our platform are carried out using a thrid party Escrow service to ensure payments are only made when both parties are satisfied.</p>
         </div>
         <div className="usp__1--img">
           <img src={piggy} alt="" />
@@ -28,8 +28,8 @@ const USP = () => {
           <img src={deviceMgt} alt="" />
         </div>
         <div className="usp__2--content">
-          <h2>Getting started is easier than you think.</h2>
-          <p>We have made our onboarding process tailored to suit your needs by ensuring you get your value for time and money.</p>
+          <h2>Manage your business with ease acroass all devices</h2>
+          <p>This is 2020 and we know that you are on the go so we have made our app available on multiple devices.</p>
         </div>
       </div>
 

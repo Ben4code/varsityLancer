@@ -5,66 +5,8 @@ import pie from '../../imgs/pieChart.svg'
 import progress from '../../imgs/progress.svg'
 
 
-
-// import { withStyles, makeStyles } from '@material-ui/core/styles';
-// import Table from '@material-ui/core/Table';
-// import TableBody from '@material-ui/core/TableBody';
-// import TableCell from '@material-ui/core/TableCell';
-// import TableContainer from '@material-ui/core/TableContainer';
-// import TableHead from '@material-ui/core/TableHead';
-// import TableRow from '@material-ui/core/TableRow';
-// import Paper from '@material-ui/core/Paper';
-
-// const StyledTableCell = withStyles(theme => ({
-//   head: {
-//     backgroundColor: theme.palette.common.blue,
-//     color: theme.palette.common.white,
-//   },
-//   body: {
-//     fontSize: 14,
-//   },
-// }))(TableCell);
-
-// const StyledTableRow = withStyles(theme => ({
-//   root: {
-//     '&:nth-of-type(odd)': {
-//       backgroundColor: theme.palette.background.default,
-//     },
-//   },
-// }))(TableRow);
-
-// function createData(name, calories, fat, carbs, protein) {
-//   return { name, calories, fat, carbs, protein };
-// }
-
-// const rows = [
-//   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-//   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-//   createData('Eclair', 262, 16.0, 24, 6.0),
-//   createData('Cupcake', 305, 3.7, 67, 4.3),
-//   createData('Gingerbread', 356, 16.0, 49, 3.9),
-// ];
-
-// const useStyles = makeStyles({
-//   table: {
-//     minWidth: 700,
-//   },
-// });
-
-
-
-
-
-
-
-
-
-
 export default function Index() {
-  // const classes = useStyles();
-
-
-
+  
   return (
     <div className="dashboard">
 
@@ -100,28 +42,38 @@ export default function Index() {
 
       <div className="dashboard__section">
         <div className="dashboard__section--body">
+
           <div className="dashboard__section--card">
-            <h4>Active Projects</h4>
+            <h4>Overall Rating</h4>
             <div className="dashboard__section--stats">
-              <img src={pie} alt=""/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>  
-          </div>
-          <div className="dashboard__section--card">
-            <h4>Jobs Completed</h4>
-            <div className="dashboard__section--stats">
-              <img src={progress} alt=""/>
+              <img src={progress} alt="" />
               <ul>
-                <li> Lorem, ipsum dolor.</li>
-                <li>Lorem, ipsum dolor.</li>
-                <li>Lorem, ipsum dolor.</li>
+                <li> Completed task: 32</li>
+                <li>Ratings received: 18</li>
+                
+                
               </ul>
             </div>
           </div>
+
           <div className="dashboard__section--card">
-            <h4>Top Skills</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, labore?</p>
+            <h4>Jobs Completed</h4>
+            <div className="dashboard__section--stats">
+              <img src={pie} alt="" />
+              <ul>
+                <li style={{ color: "#0B66B7" }}> Completed</li>
+                <li style={{ color: "#0BACB7" }}>Ongoing</li>
+                <li style={{ color: "#660BB7" }}>Started</li>
+                <li style={{ color: "#0BB778" }}>Undone</li>
+              </ul>
+            </div>
           </div>
+
+          <div className="dashboard__section--card">
+            <h4>User Summary</h4>
+            <p>I  will build a bespoke web application for you in record time.</p>
+          </div>
+
         </div>
       </div>
 
@@ -129,99 +81,68 @@ export default function Index() {
         <div className="dashboard__content">
 
           <div className="dashboard__content--item">
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>Wordpress custom theme development for my business.</h3>
             <div className="dashboard__content--meta">
               <div>
                 <p className="dashboard__content--desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis tenetur, cumque exercitationem numquam beatae porro!
+                  I will like you to build a custom theme for my ecommerce business. The I have a few ideas that are similar to what I want...
                 </p>
                 <ul>
-                  <li className="dashboard__content--time">Posted 5mins age</li>
+                  <li className="dashboard__content--time">Posted 5mins ago</li>
                   <li>
                     <span className="dashboard__content--badge">Php</span>
-                    <span className="dashboard__content--badge">Javascript</span>
-                    <span className="dashboard__content--badge">Node</span>
+                    <span className="dashboard__content--badge">Wordpress</span>
                   </li>
                 </ul>
               </div>
               <span className="dashboard__content--price">£400</span>
-            </div>  
+            </div>
           </div>
 
           <div className="dashboard__content--item">
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>Designer need for brand logo and other graphics.</h3>
             <div className="dashboard__content--meta">
               <div>
                 <p className="dashboard__content--desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis tenetur, cumque exercitationem numquam beatae porro!
+                  We would like a professional logo built for our brand.
                 </p>
                 <ul>
-                  <li className="dashboard__content--time">Posted 5mins age</li>
+                  <li className="dashboard__content--time">Posted 1hr 33mins ago</li>
                   <li>
-                    <span className="dashboard__content--badge">Php</span>
-                    <span className="dashboard__content--badge">Javascript</span>
-                    <span className="dashboard__content--badge">Node</span>
+                    <span className="dashboard__content--badge">Photoshop</span>
+                    <span className="dashboard__content--badge">Illustrator</span>
                   </li>
                 </ul>
               </div>
-              <span className="dashboard__content--price">£400</span>
+              <span className="dashboard__content--price">£100</span>
             </div>
           </div>
 
-          {/* <div className="dashboard__content--item">
-            <h3>Lorem ipsum dolor sit amet.</h3>
+
+          {/* 
+          <div className="dashboard__content--item">
+            <h3>Logo design job required!</h3>
             <div className="dashboard__content--meta">
               <div>
                 <p className="dashboard__content--desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis tenetur, cumque exercitationem numquam beatae porro!
+                  Must have good knowledge of Adobe Photoshop. I need a professional logo design for my cab hailing business.
                 </p>
                 <ul>
-                  <li className="dashboard__content--time">Posted 5mins age</li>
+                  <li className="dashboard__content--time">Posted 20hrs 5mins ago</li>
                   <li>
-                    <span className="dashboard__content--badge">Php</span>
-                    <span className="dashboard__content--badge">Javascript</span>
-                    <span className="dashboard__content--badge">Node</span>
+                    <span className="dashboard__content--badge">Photoshop</span>
+                    <span className="dashboard__content--badge">Illustrator</span>
                   </li>
                 </ul>
               </div>
-              <span className="dashboard__content--price">£400</span>
+              <span className="dashboard__content--price">£100</span>
             </div>
           </div> */}
 
+
+
         </div>
-
-
-        {/* <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-                <StyledTableCell align="right">Calories</StyledTableCell>
-                <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-                <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-                <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map(row => (
-                <StyledTableRow key={row.name}>
-                  <StyledTableCell component="th" scope="row">
-                    {row.name}
-                  </StyledTableCell>
-                  <StyledTableCell align="right">{row.calories}</StyledTableCell>
-                  <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                  <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-                  <StyledTableCell align="right">{row.protein}</StyledTableCell>
-                </StyledTableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer> */}
-
-
-
       </div>
-
     </div>
   )
 }

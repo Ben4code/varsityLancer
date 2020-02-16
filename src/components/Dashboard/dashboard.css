@@ -1,11 +1,10 @@
 .dashboard{
   margin-top: 6.4rem;
-  /* margin-bottom: 6.4rem; */
   height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: 15% 1fr 1fr 1fr;
-  grid-template-rows: 10% 30% 60%;
+  grid-template-rows: 10% 30% auto;
   grid-template-areas: 
     "sidebar header header header" 
     "sidebar section section section"
