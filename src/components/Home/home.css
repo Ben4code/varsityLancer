@@ -55,11 +55,15 @@ h4{
 section{
   padding: 8rem 0;
 }
+.MuiDrawer-paper{
+  font-size: 1.7rem;
+}
 .jumbo{
   display: flex;
   justify-content: left;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2.7rem;
+  width: 100%;
 }
 .jumbo__content{
   padding-left: 10rem;
@@ -69,6 +73,7 @@ section{
   font-family: 'Raleway';
   font-weight: 100;
   margin-bottom: 2rem;
+  width: 70%;
 }
 .jumbo__content button{
   color: #fff;
@@ -181,6 +186,9 @@ section{
   flex-wrap: wrap;
   margin-bottom: 10rem;
 }
+.usp__1 img, .usp__2 img{
+  width: 90%;
+}
 .usp__1--content{
   width: 60rem;
   padding: 1rem;
@@ -220,3 +228,14 @@ section{
   font-size: 2.1rem;
 }
 
+@media only screen and (max-width: 800px){
+  html{
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  html{
+    font-size: 37.5%;
+  }
+}

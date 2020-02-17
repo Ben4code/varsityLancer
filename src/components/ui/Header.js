@@ -37,10 +37,14 @@ const useStyles = makeStyles(theme => ({
     width: "15%",
     marginLeft: "7rem",
     [theme.breakpoints.down("md")]: {
-      height: '3em'
+      // height: '3em'
+      width: "10%",
+      marginLeft: "7rem",
     },
     [theme.breakpoints.down("xs")]: {
-      height: '2em'
+      // height: '2em'
+      width: "10%",
+      marginLeft: "7rem",
     }
   },
   tabContainer: {

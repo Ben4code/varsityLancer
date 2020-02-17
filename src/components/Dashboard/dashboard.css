@@ -23,7 +23,6 @@
 
 .dashboard__sidebar img{
   width: 30%;
-  height: 11.5%;
   border: 2px solid #fff;
   border-radius: 50%;
 }
@@ -46,8 +45,6 @@
 .dashboard__sidebar--menu li{
   padding: 1rem;
   border-bottom: 1px solid #111;
-  
-  
 }
 .dashboard__sidebar--menu li a{
   font-weight: 400;
@@ -183,4 +180,13 @@
 .dashboard__content--time{
   font-style: italic;
   margin: .8rem 0;
+}
+
+@media only screen and (min-width:600px){
+  /* .dashboard{
+    grid-template-areas: 
+    "sidebar header header header" 
+    "sidebar section section section"
+    "sidebar main main main";
+  } */
 }
